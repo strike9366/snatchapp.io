@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNATCH APPS - Професійне цифрове маркетингове агентство</title>
+    <meta name="description" content="Професійне цифрове маркетингове агентство для масштабування вашого бізнесу. SEO, контекстна реклама, SMM, веб-розробка.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Styles */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(132, 204, 22, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo img {
+            height: 96px;
+            width: auto;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: #84cc16;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-inner {
+            width: 32px;
+            height: 32px;
+            background: #111827;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-dot {
+            width: 16px;
+            height: 16px;
+            background: #84cc16;
+            border-radius: 2px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #84cc16;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid rgba(132, 204, 22, 0.3);
+            border-radius: 8px;
+            color: #84cc16;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            background: rgba(132, 204, 22, 0.1);
+        }
+
+        /* Background Elements */
+        .bg-decorations {
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .bg-dollar {
+            position: absolute;
+            color: #84cc16;
+            font-weight: 700;
+            font-size: 48px;
+        }
+
+        .bg-dollar-1 { top: 80px; left: 40px; transform: rotate(12deg); }
+        .bg-dollar-2 { top: 160px; right: 80px; transform: rotate(-12deg); font-size: 32px; }
+        .bg-dollar-3 { bottom: 160px; left: 80px; transform: rotate(45deg); font-size: 40px; }
+        .bg-dollar-4 { bottom: 80px; right: 160px; transform: rotate(-45deg); font-size: 24px; }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 96px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-logo {
+            margin-bottom: 32px;
+        }
+
+        .hero-logo img {
+            height: 240px;
+            width: auto;
+        }
+
+        .hero-highlight {
+            color: #84cc16;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: #d1d5db;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #84cc16;
+            color: #111827;
+        }
+
+        .btn-primary:hover {
+            background: #65a30d;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #84cc16;
+            border: 2px solid #84cc16;
+        }
+
+        .btn-outline:hover {
+            background: #84cc16;
+            color: #111827;
+        }
+
+        .trust-indicators {
+            display: flex;
+            gap: 24px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-icon {
+            color: #84cc16;
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-circle {
+            width: 384px;
+            height: 384px;
+            position: relative;
+        }
+
+        .hero-bg-circle {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(132, 204, 22, 0.2), rgba(132, 204, 22, 0.4));
+            border-radius: 50%;
+        }
+
+        .hero-emoji {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 128px;
+        }
+
+        .floating-element {
+            position: absolute;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .float-1 {
+            top: -16px;
+            right: -16px;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #f97316, #dc2626);
+        }
+
+        .float-2 {
+            top: 32px;
+            left: -32px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+        }
+
+        .float-3 {
+            bottom: -32px;
+            right: 32px;
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+        }
+
+        .float-4 {
+            bottom: 16px;
+            left: -16px;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #eab308, #f97316);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 48px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .stat-icon {
+            width: 64px;
+            height: 64px;
+            background: #84cc16;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #84cc16;
+        }
+
+        .stat-text {
+            font-size: 18px;
+            color: #d1d5db;
+            line-height: 1.3;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-alt {
+            background: rgba(31, 41, 55, 0.5);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-title {
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: #d1d5db;
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .service-card {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #84cc16;
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: #84cc16;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .service-description {
+            color: #d1d5db;
+            margin-bottom: 24px;
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .check-icon {
+            color: #84cc16;
+        }
+
+        /* Process Steps */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: #84cc16;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .step-description {
+            color: #d1d5db;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .portfolio-card {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .portfolio-card:hover {
+            border-color: #84cc16;
+        }
+
+        .portfolio-image {
+            height: 192px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .portfolio-content {
+            padding: 24px;
+        }
+
+        .portfolio-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-description {
+            color: #d1d5db;
+            margin-bottom: 16px;
+        }
+
+        .portfolio-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .portfolio-roi {
+            color: #84cc16;
+        }
+
+        .portfolio-duration {
+            color: #9ca3af;
+        }
+
+        /* Why Choose Us */
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            background: #84cc16;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .feature-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .feature-content p {
+            color: #d1d5db;
+        }
+
+        .why-visual {
+            position: relative;
+        }
+
+        .visual-container {
+            width: 100%;
+            height: 384px;
+            background: linear-gradient(135deg, rgba(132, 204, 22, 0.2), rgba(132, 204, 22, 0.4));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visual-emoji {
+            font-size: 128px;
+        }
+
+        .visual-float {
+            position: absolute;
+            background: #84cc16;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .visual-float-1 {
+            top: 16px;
+            right: 16px;
+            width: 64px;
+            height: 64px;
+            font-size: 24px;
+        }
+
+        .visual-float-2 {
+            bottom: 16px;
+            left: 16px;
+            width: 80px;
+            height: 80px;
+            font-size: 24px;
+        }
+
+        .visual-float-3 {
+            top: 50%;
+            left: 16px;
+            width: 48px;
+            height: 48px;
+            font-size: 20px;
+        }
+
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .pricing-card {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: #84cc16;
+        }
+
+        .pricing-card.featured {
+            border-color: #84cc16;
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #84cc16;
+            color: #111827;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .pricing-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .pricing-price {
+            font-size: 48px;
+            font-weight: 700;
+            color: #84cc16;
+            margin-bottom: 24px;
+        }
+
+        .pricing-period {
+            font-size: 18px;
+            color: #9ca3af;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            background: #84cc16;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 16px;
+        }
+
+        .testimonial-info h4 {
+            font-weight: 700;
+        }
+
+        .testimonial-info p {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        .testimonial-rating {
+            margin-left: auto;
+            display: flex;
+            gap: 4px;
+        }
+
+        .star {
+            color: #84cc16;
+        }
+
+        .testimonial-text {
+            color: #d1d5db;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .faq-question {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .faq-answer {
+            color: #d1d5db;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .blog-card {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover {
+            border-color: #84cc16;
+        }
+
+        .blog-image {
+            height: 192px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .blog-content {
+            padding: 24px;
+        }
+
+        .blog-date {
+            font-size: 14px;
+            color: #84cc16;
+            margin-bottom: 8px;
+        }
+
+        .blog-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .blog-excerpt {
+            color: #d1d5db;
+            margin-bottom: 16px;
+        }
+
+        .blog-link {
+            color: #84cc16;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .blog-link:hover {
+            color: #65a30d;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(132, 204, 22, 0.1), rgba(132, 204, 22, 0.2));
+            text-align: center;
+        }
+
+        .cta-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .cta-feature {
+            text-align: center;
+        }
+
+        .cta-feature-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .cta-feature h3 {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .cta-feature p {
+            color: #9ca3af;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            padding: 48px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .footer-section h4 {
+            color: #84cc16;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #84cc16;
+        }
+
+        .footer-contact {
+            color: #9ca3af;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            background: #84cc16;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #111827;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #84cc16;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 72px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 48px;
+            }
+
+            .hero-logo img {
+                height: 160px;
+            }
+
+            .logo img {
+                height: 64px;
+            }
+
+            .section-title {
+                font-size: 48px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Decorations -->
+    <div class="bg-decorations">
+        <div class="bg-dollar bg-dollar-1">$</div>
+        <div class="bg-dollar bg-dollar-2">$</div>
+        <div class="bg-dollar bg-dollar-3">$</div>
+        <div class="bg-dollar bg-dollar-4">$</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SA-vpIMueUYgXaOVQWPl3dcHrtA6tCgqB.png" alt="SNATCH APPS">
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="#services">Послуги</a></li>
+                        <li><a href="#portfolio">Портфоліо</a></li>
+                        <li><a href="#about">Про нас</a></li>
+                        <li><a href="#pricing">Ціни</a></li>
+                        <li><a href="#contacts">Контакти</a></li>
+                        <li><a href="#blog">Блог</a></li>
+                    </ul>
+
+                    <div class="social-links">
+                        <button class="social-btn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </button>
+                        <button class="social-btn">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                        <button class="social-btn">
+                            <i class="fab fa-telegram-plane"></i>
+                        </button>
+                    </div>
+
+                    <div style="font-size: 14px; font-weight: 500;">UA</div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div style="margin-bottom: 32px;">
+                        <div class="logo-icon" style="margin-bottom: 32px; position: relative;">
+                            <div style="width: 32px; height: 32px; border: 2px solid #111827; border-radius: 4px;"></div>
+                            <div style="position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; background: #84cc16; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 8px; height: 8px; background: #111827; border-radius: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-logo">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SA-vpIMueUYgXaOVQWPl3dcHrtA6tCgqB.png" alt="SNATCH APPS">
+                    </div>
+
+                    <p class="hero-subtitle">
+                        Професійне цифрове маркетингове агентство<br>
+                        для масштабування вашого бізнесу
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#contacts" class="btn btn-primary">БЕЗКОШТОВНА КОНСУЛЬТАЦІЯ</a>
+                        <a href="#portfolio" class="btn btn-outline">НАШІ КЕЙСИ</a>
+                    </div>
+
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <i class="fas fa-star trust-icon"></i>
+                            <span>4.9/5 рейтинг</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt trust-icon"></i>
+                            <span>100% гарантія</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-clock trust-icon"></i>
+                            <span>24/7 підтримка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-circle">
+                        <div class="hero-bg-circle"></div>
+                        <div class="hero-emoji">🚀</div>
+
+                        <div class="floating-element float-1">SEO</div>
+                        <div class="floating-element float-2">SMM</div>
+                        <div class="floating-element float-3">PPC</div>
+                        <div class="floating-element float-4">WEB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">🎯</div>
+                    <div>
+                        <div class="stat-number">300+</div>
+                        <div class="stat-text">УСПІШНИХ<br>ПРОЕКТІВ</div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">📈</div>
+                    <div>
+                        <div class="stat-number">150%</div>
+                        <div class="stat-text">СЕРЕДНІЙ РІСТ ПРОДАЖІВ</div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">⭐</div>
+                    <div>
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-text">РЕЙТИНГ КЛІЄНТІВ</div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">🏆</div>
+                    <div>
+                        <div class="stat-number">№1</div>
+                        <div class="stat-text">В УКРАЇНІ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">НАШІ <span class="hero-highlight">ПОСЛУГИ</span></h2>
+                <p class="section-subtitle">Повний спектр цифрового маркетингу для зростання вашого бізнесу</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe" style="color: #111827; font-size: 24px;"></i>
+                    </div>
+                    <h3 class="service-title">SEO оптимізація</h3>
+                    <p class="service-description">Виведемо ваш сайт в ТОП Google та Яндекс за цільовими запитами</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle check-icon"></i> Технічний аудит</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Контент-стратегія</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Лінкбілдінг</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye" style="color: #111827; font-size: 24px;"></i>
+                    </div>
+                    <h3 class="service-title">Контекстна реклама</h3>
+                    <p class="service-description">Налаштуємо ефективну рекламу в Google Ads та Facebook</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle check-icon"></i> Google Ads</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Facebook Ads</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Ретаргетинг</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users" style="color: #111827; font-size: 24px;"></i>
+                    </div>
+                    <h3 class="service-title">SMM просування</h3>
+                    <p class="service-description">Розвиток бренду в соціальних мережах та залучення аудиторії</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle check-icon"></i> Контент-план</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Дизайн постів</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Комьюніті менеджмент</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt" style="color: #111827; font-size: 24px;"></i>
+                    </div>
+                    <h3 class="service-title">Веб-розробка</h3>
+                    <p class="service-description">Створення сучасних та швидких веб-сайтів</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle check-icon"></i> Лендінги</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Інтернет-магазини</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Корпоративні сайти</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line" style="color: #111827; font-size: 24px;"></i>
+                    </div>
+                    <h3 class="service-title">Аналітика</h3>
+                    <p class="service-description">Детальний аналіз ефективності всіх маркетингових каналів</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle check-icon"></i> Google Analytics</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Звіти та дашборди</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> A/B тестування</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-award" style="color: #111827; font-size: 24px;"></i>
+                    </div>
+                    <h3 class="service-title">Брендинг</h3>
+                    <p class="service-description">Створення унікального образу бренду та фірмового стилю</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle check-icon"></i> Логотип та фірмстиль</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Брендбук</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Упаковка</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ЯК МИ <span class="hero-highlight">ПРАЦЮЄМО</span></h2>
+                <p class="section-subtitle">Наш перевірений процес забезпечує максимальний результат</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Аналіз</h3>
+                    <p class="step-description">Детально вивчаємо ваш бізнес, конкурентів та цільову аудиторію</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Стратегія</h3>
+                    <p class="step-description">Розробляємо індивідуальну маркетингову стратегію для вашого бізнесу</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Реалізація</h3>
+                    <p class="step-description">Втілюємо план в життя, використовуючи найкращі інструменти</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Оптимізація</h3>
+                    <p class="step-description">Постійно аналізуємо результати та покращуємо ефективність</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">НАШІ <span class="hero-highlight">КЕЙСИ</span></h2>
+                <p class="section-subtitle">Реальні результати наших клієнтів</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
+                        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 24px; font-weight: 700;">E-COMMERCE</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Інтернет-магазин одягу</h3>
+                        <p class="portfolio-description">Збільшення продажів на 280% за 6 місяців</p>
+                        <div class="portfolio-stats">
+                            <span class="portfolio-roi">ROI: 450%</span>
+                            <span class="portfolio-duration">6 місяців</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #10b981, #06b6d4);">
+                        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 24px; font-weight: 700;">FINTECH</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Фінансовий стартап</h3>
+                        <p class="portfolio-description">Залучення 10,000+ користувачів</p>
+                        <div class="portfolio-stats">
+                            <span class="portfolio-roi">CPA: -60%</span>
+                            <span class="portfolio-duration">4 місяці</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f97316, #dc2626);">
+                        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 24px; font-weight: 700;">RESTAURANT</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Мережа ресторанів</h3>
+                        <p class="portfolio-description">Ріст онлайн-замовлень на 320%</p>
+                        <div class="portfolio-stats">
+                            <span class="portfolio-roi">ROAS: 8.5</span>
+                            <span class="portfolio-duration">3 місяці</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="#contacts" class="btn btn-primary">
+                    ПЕРЕГЛЯНУТИ ВСІ КЕЙСИ
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <div class="why-choose-grid">
+                <div>
+                    <h2 style="font-size: 60px; font-weight: 700; margin-bottom: 32px;">
+                        ЧОМУ ОБИРАЮТЬ <span class="hero-highlight">SNATCH APPS</span>?
+                    </h2>
+
+                    <ul class="features-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle" style="color: #111827; font-size: 16px;"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Гарантований результат</h3>
+                                <p>Ми гарантуємо досягнення KPI або повертаємо кошти</p>
+                            </div>
+                        </li>
+
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle" style="color: #111827; font-size: 16px;"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Команда експертів</h3>
+                                <p>Понад 50 сертифікованих спеціалістів з досвідом 5+ років</p>
+                            </div>
+                        </li>
+
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle" style="color: #111827; font-size: 16px;"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Прозорість процесів</h3>
+                                <p>Щотижневі звіти та доступ до всіх аналітичних даних</p>
+                            </div>
+                        </li>
+
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle" style="color: #111827; font-size: 16px;"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Індивідуальний підхід</h3>
+                                <p>Персональний менеджер та стратегія під ваш бізнес</p>
+                            </div>
+                        </li>
+
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle" style="color: #111827; font-size: 16px;"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Швидкий старт</h3>
+                                <p>Запуск перших кампаній протягом 48 годин</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="why-visual">
+                    <div class="visual-container">
+                        <div class="visual-emoji">📊</div>
+                        <div class="visual-float visual-float-1">💡</div>
+                        <div class="visual-float visual-float-2">🎯</div>
+                        <div class="visual-float visual-float-3">⚡</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">НАШІ <span class="hero-highlight">ТАРИФИ</span></h2>
+                <p class="section-subtitle">Оберіть оптимальний пакет для вашого бізнесу</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">СТАРТОВИЙ</h3>
+                    <div class="pricing-price">
+                        $999<span class="pricing-period">/міс</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle check-icon"></i> SEO оптимізація</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Google Ads</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Базова аналітика</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Щомісячні звіти</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn-outline" style="width: 100%;">ОБРАТИ ПЛАН</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">ПОПУЛЯРНИЙ</div>
+                    <h3 class="pricing-title">ПРОФЕСІЙНИЙ</h3>
+                    <div class="pricing-price">
+                        $1999<span class="pricing-period">/міс</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle check-icon"></i> Все зі стартового</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Facebook Ads</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> SMM просування</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Розширена аналітика</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Щотижневі звіти</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn-primary" style="width: 100%;">ОБРАТИ ПЛАН</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3 class="pricing-title">КОРПОРАТИВНИЙ</h3>
+                    <div class="pricing-price">
+                        $3999<span class="pricing-period">/міс</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle check-icon"></i> Все з професійного</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Веб-розробка</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Брендинг</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> Персональний менеджер</li>
+                        <li><i class="fas fa-check-circle check-icon"></i> 24/7 підтримка</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn-outline" style="width: 100%;">ОБРАТИ ПЛАН</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ВІДГУКИ <span class="hero-highlight">КЛІЄНТІВ</span></h2>
+                <p class="section-subtitle">Що кажуть про нас наші клієнти</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👨‍💼</div>
+                        <div class="testimonial-info">
+                            <h4>Олександр Петренко</h4>
+                            <p>CEO, TechStart</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Snatch Apps допомогли нам збільшити продажі на 300% за півроку. Професійна команда та відмінні результати!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👩‍💼</div>
+                        <div class="testimonial-info">
+                            <h4>Марія Коваленко</h4>
+                            <p>Власниця, Beauty Studio</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Завдяки SEO та SMM від Snatch Apps, наш салон красоти став найпопулярнішим у місті. Дякуємо за якісну роботу!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👨‍🍳</div>
+                        <div class="testimonial-info">
+                            <h4>Дмитро Іваненко</h4>
+                            <p>Власник, Ресторан "Смак"</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Онлайн-замовлення зросли в 4 рази! Snatch Apps - справжні професіонали своєї справи."
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👩‍⚕️</div>
+                        <div class="testimonial-info">
+                            <h4>Анна Сидоренко</h4>
+                            <p>Директор, Медичний центр</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Кількість пацієнтів збільшилась удвічі завдяки ефективній рекламі. Рекомендую всім!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👨‍💻</div>
+                        <div class="testimonial-info">
+                            <h4>Сергій Мельник</h4>
+                            <p>Засновник, IT-компанія</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Найкраще агентство в Україні! Результати перевершили всі очікування."
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👩‍🎨</div>
+                        <div class="testimonial-info">
+                            <h4>Катерина Бондар</h4>
+                            <p>Дизайнер, Творча студія</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Snatch Apps створили для нас неймовірний сайт та налаштували рекламу. Замовлень стало в рази більше!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ЧАСТІ <span class="hero-highlight">ПИТАННЯ</span></h2>
+                <p class="section-subtitle">Відповіді на найпопулярніші запитання</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Скільки часу потрібно для отримання результатів?</h3>
+                    <p class="faq-answer">
+                        Перші результати ви побачите вже через 2-4 тижні, а значні покращення - через 2-3 місяці регулярної роботи.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Чи надаєте ви гарантії на результат?</h3>
+                    <p class="faq-answer">
+                        Так, ми гарантуємо досягнення узгоджених KPI або повертаємо кошти. Детальні умови прописуються в договорі.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Які звіти ви надаєте?</h3>
+                    <p class="faq-answer">
+                        Ми надаємо детальні щотижневі та щомісячні звіти з усіма ключовими метриками та рекомендаціями.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Чи працюєте ви з малим бізнесом?</h3>
+                    <p class="faq-answer">
+                        Так, ми працюємо з компаніями будь-якого розміру - від стартапів до великих корпорацій.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Як відбувається оплата?</h3>
+                    <p class="faq-answer">
+                        Оплата здійснюється щомісячно після підписання договору. Перший платіж - 50% авансом.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">НАШ <span class="hero-highlight">БЛОГ</span></h2>
+                <p class="section-subtitle">Корисні статті про цифровий маркетинг</p>
+            </div>
+
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #84cc16, #65a30d);">
+                        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+                            <span>📱</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">15 грудня 2024</div>
+                        <h3 class="blog-title">10 трендів мобільного маркетингу 2025</h3>
+                        <p class="blog-excerpt">
+                            Дізнайтеся про найактуальніші тренди мобільного маркетингу на наступний рік...
+                        </p>
+                        <a href="#" class="blog-link">
+                            Читати далі <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
+                        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+                            <span>🎯</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">12 грудня 2024</div>
+                        <h3 class="blog-title">Як знизити CPC в Google Ads на 40%</h3>
+                        <p class="blog-excerpt">
+                            Практичні поради для оптимізації рекламних кампаній та зниження вартості кліка...
+                        </p>
+                        <a href="#" class="blog-link">
+                            Читати далі <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #f97316, #dc2626);">
+                        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+                            <span>📊</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">10 грудня 2024</div>
+                        <h3 class="blog-title">SEO аудит: покрокова інструкція</h3>
+                        <p class="blog-excerpt">Детальний гайд по проведенню технічного SEO аудиту вашого сайту...</p>
+                        <a href="#" class="blog-link">
+                            Читати далі <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="#" class="btn btn-primary">
+                    ПЕРЕГЛЯНУТИ ВСІ СТАТТІ
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2 style="font-size: 72px; font-weight: 700; margin-bottom: 32px;">
+                    ГОТОВІ ЗБІЛЬШИТИ <span class="hero-highlight">ПРОДАЖІ</span>?
+                </h2>
+                <p style="font-size: 20px; color: #d1d5db; margin-bottom: 48px;">
+                    Отримайте безкоштовну консультацію та дізнайтеся, як ми можемо допомогти вашому бізнесу
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; margin-bottom: 48px; flex-wrap: wrap;">
+                    <a href="#contacts" class="btn btn-primary">БЕЗКОШТОВНА КОНСУЛЬТАЦІЯ</a>
+                    <a href="#pricing" class="btn btn-outline">РОЗРАХУВАТИ ВАРТІСТЬ</a>
+                </div>
+
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <div class="cta-feature-icon">⚡</div>
+                        <h3>Швидкий старт</h3>
+                        <p>Запуск за 48 годин</p>
+                    </div>
+                    <div class="cta-feature">
+                        <div class="cta-feature-icon">🎯</div>
+                        <h3>Гарантований результат</h3>
+                        <p>Або повертаємо кошти</p>
+                    </div>
+                    <div class="cta-feature">
+                        <div class="cta-feature-icon">📞</div>
+                        <h3>24/7 підтримка</h3>
+                        <p>Завжди на зв'язку</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacts" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo" style="margin-bottom: 24px;">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SA-vpIMueUYgXaOVQWPl3dcHrtA6tCgqB.png" alt="SNATCH APPS" style="height: 80px; width: auto;">
+                    </div>
+                    <p style="color: #9ca3af; margin-bottom: 24px;">
+                        Професійне цифрове маркетингове агентство для масштабування вашого бізнесу
+                    </p>
+                    <div class="social-links">
+                        <button class="social-btn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </button>
+                        <button class="social-btn">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                        <button class="social-btn">
+                            <i class="fab fa-telegram-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Послуги</h4>
+                    <ul>
+                        <li><a href="#services">SEO оптимізація</a></li>
+                        <li><a href="#services">Контекстна реклама</a></li>
+                        <li><a href="#services">SMM просування</a></li>
+                        <li><a href="#services">Веб-розробка</a></li>
+                        <li><a href="#services">Аналітика</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Компанія</h4>
+                    <ul>
+                        <li><a href="#about">Про нас</a></li>
+                        <li><a href="#portfolio">Портфоліо</a></li>
+                        <li><a href="#blog">Блог</a></li>
+                        <li><a href="#">Кар'єра</a></li>
+                        <li><a href="#">Партнерство</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <span>hello@snatchapps.ua</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <span>+38 (067) 123-45-67</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <span>м. Київ, вул. Хрещатик, 1</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <span>Пн-Пт: 9:00-18:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div style="color: #9ca3af;">
+                    <p>&copy; 2024 Snatch Apps. Всі права захищені.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Політика конфіденційності</a>
+                    <a href="#">Умови використання</a>
+                    <a href="#">Договір оферти</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const mobileMenuBtn = document.querySelector('.header nav button');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+    </script>
+</body>
+</html>
+
+Готово! ✅ Логотип **SNATCH APPS** тепер збільшено у 2 рази на всіх місцях:
+
+🔍 **Розміри логотипу:**
+- **Хедер**: 96px (було 48px)
+- **Hero секція**: 240px (було 120px) 
+- **Футер**: 80px (було 40px)
+
+📱 **Адаптивність:**
+- На мобільних пристроях логотип автоматично зменшується до розумних розмірів
+- Hero логотип: 160px на мобільних
+- Хедер логотип: 64px на мобільних
+
+Тепер логотип **SNATCH APPS** виглядає більш помітно та професійно на всіх розділах сайту!
